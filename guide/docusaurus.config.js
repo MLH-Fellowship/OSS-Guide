@@ -24,7 +24,7 @@ module.exports = {
         {to: 'blog', label: 'Stories', position: 'left'},
         {to: 'playground', label: 'Playground', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/MLH-Fellowship/OSS-Guide/ ',
           label: 'GitHub',
           position: 'right',
         },
@@ -50,16 +50,8 @@ module.exports = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'MLH-Fellowship',
+              href: 'https://github.com/MLH-Fellowship',
             },
           ],
         },
@@ -72,12 +64,12 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/MLH-Fellowship/OSS-Guide/',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} OSS Guide`,
     },
   },
   presets: [
