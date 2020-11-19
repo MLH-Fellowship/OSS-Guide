@@ -9,32 +9,30 @@ import styles from './styles.module.css';
 import ParticlesBg from 'particles-bg'
 const features = [
   {
-    title: 'Easy to Use',
-    imageUrl: 'img/undraw_docusaurus_mountain.svg',
+    title: 'A General Guide',
+    imageUrl: 'img/undraw_save_to_bookmarks_y708.svg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        A handbook that describes concrete ways to make exploring/contributing to large codebases less intimidating.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    imageUrl: 'img/undraw_docusaurus_tree.svg',
+    title: 'Community Specific Guidelines',
+    imageUrl: 'img/undraw_community_8nwl.svg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        A central repository of Community specific guidelines laid down by the maintainers, and personal stories and experiences
+        of fellows who've contributed to various open source communities in the past.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    imageUrl: 'img/undraw_docusaurus_react.svg',
+    title: 'Live Playground',
+    imageUrl: 'img/undraw_code_review_l1q9.svg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Users can play around with code snippets and run them through a debugger. They can also generate UML diagrams, call graphs and much more.
       </>
     ),
   },
