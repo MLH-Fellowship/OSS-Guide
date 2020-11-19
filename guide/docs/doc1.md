@@ -163,3 +163,11 @@ Paraphrasing from [Python docs](https://docs.python.org/3/library/profile.html),
 
 In conclusion -
 > Debugging is anticipated with distaste, performed with reluctance, and bragged about forever.  
+
+## Claiming an Issue
+
+The maintainers of the repositories we’re working with have agreed to allocate time to support the MLH Fellows. As such, when an MLH Fellow indicates they want to work on something, the maintainers are generally happy to make sure other contributors don’t try to work on the same thing.
+
+As such, when you decide to work on an issue, clearly state your intentions on the issue’s discussion thread:
+
+![Claiming an Issue](./assets/claiming-an-issue.png)
