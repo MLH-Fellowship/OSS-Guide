@@ -101,3 +101,14 @@ git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -10
 # For top 50 most edited files with file_name/directory_name containing the word - <NAME>
 git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -50 | grep “<NAME>”
 ```
+
+## Discovering Issues
+
+In the discovery phase, your goal is to come up with a good (written) list of issues you would like to work on. A good issue is one that:
+
+* You are interested in working on
+* Requires skills that you already have or could reasonably learn during the program
+
+Please only look for issues within your assigned Project. MLH mentors recommend starting by searching for issues with the `help wanted`, `good first issue`, `MLH` or `hacktoberfest` labels. The mentors also recommend that you start with smaller easier issues at the beginning of the fellowship and work your way up to complex and more difficult issues throughout the program.
+
+In conclusion, select 3 to 5 issues that meet the criteria above. Write them down in a place where you can take notes and expand upon them.
