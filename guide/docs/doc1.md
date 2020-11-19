@@ -112,3 +112,54 @@ In the discovery phase, your goal is to come up with a good (written) list of is
 Please only look for issues within your assigned Project. MLH mentors recommend starting by searching for issues with the `help wanted`, `good first issue`, `MLH` or `hacktoberfest` labels. The mentors also recommend that you start with smaller easier issues at the beginning of the fellowship and work your way up to complex and more difficult issues throughout the program.
 
 In conclusion, select 3 to 5 issues that meet the criteria above. Write them down in a place where you can take notes and expand upon them.
+
+## Coding and Guidance
+
+### Feedback from mentors and maintainers
+
+> Another effective (debugging) technique is to explain your code to someone else. This will often cause you to explain the bug to yourself. Sometimes it takes no more than a few sentences, followed by an embarrassed "Never mind, I see what's wrong. Sorry to bother you." This works remarkably well; you can even use non-programmers as listeners. One university computer center kept a teddy bear near the help desk. Students with mysterious bugs were required to explain them to the bear before they could speak to a human counselor.  
+> *B. Kernighan & D. Pike (in "The Practice of Programming" pp. 123)*
+
+As rightly mentioned by [Arandr](https://arandr.github.io/2015/01/17/how-i-learned-to-stop-worrying-and-debug-other-peoples-code.html), it is a positive habit to talk with experienced maintainers and explain your understanding to the new contributors. Both of them involve active thinking of the codebase, and are usually faster than trying the trial-and-error strategy.
+
+Schedule a meeting with your MLH mentor/code-maintainer to go over your plan. Come prepared to your meeting with the most detailed plans you can. A plan can ideally be a breakdown of changes, wherein a breakdown is - what are the major steps that will be needed to make this change? A good rule of thumb here is that every verb that you use should be in it’s own step.
+
+Examples of good step breakdowns:
+
+* Create a new class called `myApiService.js`
+* Extract the code from the `getApiResponse` function in `myComponent.js` into its own class. The public methods in this class will be ...
+* Write a new test to cover the case when an argument is not sent to the `xyz` function.
+
+During the meeting, the mentor/maintainer will provide you with clarification and improvements to your plan. They may ask to improve certain aspects of your plan or move right to the acceptance phase.
+
+### Debugging, Logging, and Profilers
+
+> Debugging is an art that needs much further study .... The most effective debugging techniques seem to be those which are designed and built into the program itself -many of today's best programmers will devote nearly half of their programs to facilitating the debugging process on the other half; the first half... will eventually be thrown away, but the net result is a surprising gain in productivity.  
+> Another good debugging practice is to keep a record of every mistake that is made. Even though this will probably be quite embarrassing, such information is invaluable to anyone doing research on the debugging problem, and it will also help you learn how to reduce the number of future errors.  
+> D. Knuth (The Art of Computer Programming, Volume 1)
+
+Debuggers are one of the strongest tools in every programmer’s arsenal. Ideally, for understanding certain function calls, you should pick a request flow, initiate a request, and let the debugger guide you through the entire request flow. When you look at different files that the debugger guides you through, you are engaging your visual memory. You will remember how the code is organized and what the files look like. For many debuggers such as `gdb` and `pdb`, the set of commands almost remains the same. As a basic necessity, you should be familiar with the following commands -
+
+* `l` - To display lines of code from current line and below
+* `p` - To evaluate the expression in the current context and print its value
+* `s` - Step through the code
+* `n` - Next line of code (For example: If you don’t want to run say `argsort()` and want to skip to the next line, you can use `n`)
+* `q` - To quit the debugger
+* `b` - Set a breakpoint (depending on the argument provided)
+
+In some situations using a *data breakpoint* can be advantageous. Data breakpoints allow you to break execution when the value stored at a specified memory location changes. For example - watching for the change of a variable `X` to `NULL`, finding out who's releasing the memory too early and leaving back dangling pointers, observing flow when global data is accessed everywhere are some of its use cases. A more comprehensive use-case is mentioned by [Shog9 on StackOverflow](https://stackoverflow.com/questions/621535/what-are-data-breakpoints).
+
+At this point, a frequently asked question is - **won’t a print statement suffice?**
+It depends! The following answer by [Glen K. Peterson](https://softwareengineering.stackexchange.com/a/183903) excellently describes this argument - 
+> For purely software problems, I find that thinking about the problem and testing the system to learn more about the problem is much more useful than stepping through code line by line. With print statements, I have a list of everything that happened at the command line or log file that I can look at and reconstruct what happened, going backwards and forwards more easily than I ever could with a debugger.  
+> The hardest bugs are usually solved by understanding the problem away from the computer. Sometimes with a piece of paper or whiteboard, and sometimes the answer reveals itself while I'm doing something else. The trickiest bugs are solved by looking carefully at the code like playing Where's Waldo. All the rest seem easiest with print statements, or logging statements.  
+> Different people have different styles, and different styles are better for different tasks. Print statements are not necessarily a step down from a debugger. Depending on what you are doing, they can even be better. Especially in a language that doesn't have a native debugger (does Go?).  
+
+In situations wherein - the part of your program which fails is really large; program uses nonlinear flow control methods; is multithreaded; runs in real-time; or performs destructive actions like writing to files - a better alternative would be to use logging and assertions, as concisely [explained by slugfilter on StackOverflow](https://stackoverflow.com/a/29457171).
+
+A detailed explanation to debugging is provided by MIT instructors - Robert Miller and Max Goldman in the [reading materials](https://ocw.mit.edu/ans7870/6/6.005/s16/classes/11-debugging/index.html) for their 6.005: Software Construction class.
+
+Paraphrasing from [Python docs](https://docs.python.org/3/library/profile.html), Profilers provide deterministic profiling of programs. Wherein a profile is a set of statistics that describes how often and for how long various parts of the program executed. They will help you understand which parts of your program are taking most of the time and/or resources so you can focus on optimizing those parts. A brilliant guide detailing profilers is provided in [MIT’s Missing Semester](https://missing.csail.mit.edu/2020/debugging-profiling/#profiling) reading materials.
+
+In conclusion -
+> Debugging is anticipated with distaste, performed with reluctance, and bragged about forever.  
