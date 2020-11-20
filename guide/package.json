@@ -18,6 +18,7 @@
     "clsx": "^1.1.1",
     "codemirror": "^5.58.3",
     "particles-bg": "^2.5.0",
+    "prettier": "^2.2.0",
     "react": "^16.8.4",
     "react-codemirror2": "^7.2.1",
     "react-dom": "^16.8.4"
@@ -38,11 +39,9 @@
     "husky": "^4.3.0",
     "pretty-quick": "^3.1.0"
   },
-  
-    "husky": {
-      "hooks": {
-        "pre-commit": "pretty-quick --staged"
-      }
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
     }
-  
+  }
 }
