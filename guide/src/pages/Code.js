@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import axios from "axios";
 import base64 from "base-64";
-
 import styles from "./styles.module.css";
 
 import Editor from "../../components/Editor";
@@ -28,20 +27,20 @@ const Code = () => {
 
   const onClick = async () => {
     // Send code to back-end
-    var res;
+    let res;
     var input = {
-      value: base64.encode(code),
+      value: code,
     };
     if (selected === "UML") {
       res = await axios({
         method: "post",
-        url: "localhost:5000/uml",
+        url: "http://127.0.0.1:5000/uml",
         data: input,
       });
     } else if (selected === "Call Graph") {
       res = await axios({
         method: "post",
-        url: "localhost:5000/callgraph",
+        url: "http://127.0.0.1:5000/callgraph",
         data: input,
       });
     }
