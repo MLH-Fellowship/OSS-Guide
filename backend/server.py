@@ -9,9 +9,10 @@ app = Flask(__name__)
 def _write_to_file(data):
     data_dict = json.loads(data)
 
-    # print(data_dict['value'])
-    decoded_data = base64.b64decode(data_dict['value']).decode("utf-8").split("\\n")
-    # print(decoded_data)
+    print(data_dict['value'])
+    decoded_data = base64.b64decode(data_dict['value']).decode("utf-8")
+    decoded_data = bytes(decoded_data, "utf-8").decode("unicode_escape").split("\n")
+    print(decoded_data)
     
     with open('code.py', 'w') as f:
         for item in decoded_data:
@@ -48,7 +49,9 @@ def generate_callgraph():
         if not request.data:
             flash('Server received an empty code string.')
             return redirect(request.url)
+        subprocess.call(['rm', 'code.py'])
         _write_to_file(request.data)
+
         subprocess.call(
             ['pycallgraph', 'graphviz', '--' ,'./code.py'])
         img = Image.open("pycallgraph.png")
