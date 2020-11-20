@@ -1,6 +1,6 @@
 from flask import Flask, flash, request, redirect, url_for, jsonify, send_file
 from werkzeug.utils import secure_filename
-import io
+import io, json
 import base64
 from PIL import Image
 import os
@@ -16,6 +16,16 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
+def _write_to_file(data):
+    data_dict = json.loads(data)
+
+    # print(data_dict['value'])
+    decoded_data = base64.b64decode(data_dict['value']).decode("utf-8").split("\\n")
+    # print(decoded_data)
+    
+    with open('code.py', 'w') as f:
+        for item in decoded_data:
+            f.write("%s\n" % item)
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
@@ -52,7 +62,7 @@ def upload_file():
 
         return jsonify({'status': str(img_base64)})
 
-                                filename=filename))
+                                
     return '''
     <!doctype html>
     <title>Upload new File</title>
