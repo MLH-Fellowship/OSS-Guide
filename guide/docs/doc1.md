@@ -103,6 +103,32 @@ git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -10
 git log --pretty=format: --name-only | sort | uniq -c | sort -rg | head -50 | grep “<NAME>”
 ```
 
+### Searching
+
+> One can think effectively only when one is willing to endure suspense and to undergo the trouble of searching.  
+> \- J. Dewey
+
+Searching tools are particularly important while navigating large codebases. If the code is public on Github, you can navigate to its repository, press `/` to fire up Github's search tool, type your query, and get instant search results with highlighting.
+
+For local repositories, using a simple `grep` command should suffice for most purposes -
+
+```bash
+# For the command below -
+# r - recursively search through directories
+# n - print line number
+# i - case insensitive search
+grep -rni $<pattern> *
+
+# To search in specific extensions -
+grep -rni . --include \*.<extension>
+```
+
+Examples -
+![Example of using grep](./assets/grep.png)
+
+Using `ctags` and integrating it with vim is another powerful way to search a large codebase -
+> [Universal Ctags](https://github.com/universal-ctags/ctags) generates an index (or tag) file of language objects found in source files for many popular programming languages. This index makes it easy for text editors and other tools to locate the indexed items.
+
 ## Discovering Issues
 
 In the discovery phase, your goal is to come up with a good (written) list of issues you would like to work on. A good issue is one that:
