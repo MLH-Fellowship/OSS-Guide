@@ -3,6 +3,7 @@ id: general
 title: General Guide
 sidebar_label: General Guide
 slug: /
+custom_edit_url: https://github.com/MLH-Fellowship/OSS-Guide
 ---
 
 > **Joker while teaching programming:**  Real programmers don't comment their code. If it was hard to write, it should be hard to understand.  
