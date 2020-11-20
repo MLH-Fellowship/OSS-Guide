@@ -13,10 +13,13 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.66",
     "@docusaurus/preset-classic": "2.0.0-alpha.66",
+    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.68",
     "@mdx-js/react": "^1.5.8",
     "clsx": "^1.1.1",
+    "codemirror": "^5.58.3",
     "particles-bg": "^2.5.0",
     "react": "^16.8.4",
+    "react-codemirror2": "^7.2.1",
     "react-dom": "^16.8.4"
   },
   "browserslist": {
