@@ -29,17 +29,17 @@ const Code = () => {
     // Send code to back-end
     let res;
     var input = {
-      value: code,
+      value: btoa(code),
     };
     if (selected === "UML") {
       res = await axios({
-        method: "post",
+        method: "POST",
         url: "http://127.0.0.1:5000/uml",
         data: input,
       });
     } else if (selected === "Call Graph") {
       res = await axios({
-        method: "post",
+        method: "POST",
         url: "http://127.0.0.1:5000/callgraph",
         data: input,
       });

@@ -25,6 +25,7 @@ def _write_to_file(data):
 @app.route('/uml', methods=['POST'])
 def generate_uml():
     if request.method == 'POST':
+        print(request.data)
         # check if the post request has the file part
         if not request.data:
             flash('Server received an empty code string.')
@@ -49,6 +50,7 @@ def generate_uml():
 @app.route('/callgraph', methods=['POST'])
 def generate_callgraph():
     if request.method == 'POST':
+        print(request.data)
         # check if the post request has the file part
         if not request.data:
             flash('Server received an empty code string.')
