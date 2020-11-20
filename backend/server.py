@@ -5,7 +5,11 @@ import base64
 from PIL import Image
 import os
 import subprocess
+from flask_cors import CORS, cross_origin
 app = Flask(__name__)
+CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 def _write_to_file(data):
     data_dict = json.loads(data)
 
@@ -17,10 +21,11 @@ def _write_to_file(data):
     with open('code.py', 'w') as f:
         for item in decoded_data:
             f.write("%s\n" % item)
-
+@cross_origin()
 @app.route('/uml', methods=['POST'])
 def generate_uml():
     if request.method == 'POST':
+        print(request.data)
         # check if the post request has the file part
         if not request.data:
             flash('Server received an empty code string.')
@@ -41,10 +46,11 @@ def generate_uml():
 
     else:
         return "Request Method not supported"
-
+@cross_origin()
 @app.route('/callgraph', methods=['POST'])
 def generate_callgraph():
     if request.method == 'POST':
+        print(request.data)
         # check if the post request has the file part
         if not request.data:
             flash('Server received an empty code string.')

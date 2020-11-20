@@ -2,15 +2,14 @@ import React, { useState } from "react";
 import clsx from "clsx";
 import axios from "axios";
 import base64 from "base-64";
-
 import styles from "./styles.module.css";
 
 import Editor from "../../components/Editor";
 
 const Code = () => {
-  let img;
   const [code, setCode] = useState("");
   const [selected, setSelected] = useState("");
+  const [img, setImg] = useState("");
 
   const getCode = (e) => {
     var finalCode = "";
@@ -28,25 +27,27 @@ const Code = () => {
 
   const onClick = async () => {
     // Send code to back-end
-    var res;
+    let res;
     var input = {
-      value: base64.encode(code),
+      value: btoa(code),
     };
     if (selected === "UML") {
       res = await axios({
-        method: "post",
-        url: "localhost:5000/uml",
+        method: "POST",
+        url: "http://127.0.0.1:5000/uml",
         data: input,
       });
     } else if (selected === "Call Graph") {
       res = await axios({
-        method: "post",
-        url: "localhost:5000/callgraph",
+        method: "POST",
+        url: "http://127.0.0.1:5000/callgraph",
         data: input,
       });
     }
 
-    img = base64.decode(res.status);
+    let a = res.data.status;
+    a = a.slice(2, a.length-2);
+    setImg(a);
   };
 
   const handleSelection = (e) => {
@@ -69,6 +70,8 @@ const Code = () => {
         <option value="Call Graph">Call Graph</option>
       </select>
 
+      <h3>Output: </h3>
+      <br/> <br/>
       {img && <img src={`data:image/png;base64,${img}`} />}
     </div>
   );
