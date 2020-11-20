@@ -35,3 +35,41 @@
   height: 200px;
   width: 200px;
 }
+
+.btn {
+  background-color: rgb(46, 42, 42);
+  color: rgb(219, 208, 208);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 100px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 8%;
+  box-shadow: #121212 5px 8px 8px;
+}
+.btn:hover {
+  background-color: rgb(46, 39, 39);
+  text-decoration: none;
+}
+
+.dropdown {
+  margin-left: 130px;
+  background-color: rgb(46, 42, 42);
+  width: 100px;
+  height: 50px;
+  border: none;
+  color: rgb(219, 208, 208);
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 45px;
+  text-decoration: uppercase;
+  position: relative;
+  border-radius: 8%;
+  box-shadow: #121212 5px 8px 8px;
+}
