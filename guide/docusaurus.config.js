@@ -22,7 +22,6 @@ module.exports = {
           position: 'left',
         },
         {to: 'blog', label: 'Stories', position: 'left'},
-        {to: 'playground', label: 'Playground', position: 'left'},
         {
           href: 'https://github.com/MLH-Fellowship/OSS-Guide/ ',
           label: 'GitHub',
@@ -94,4 +93,5 @@ module.exports = {
       },
     ],
   ],
+  // themes: ['@docusaurus/theme-live-codeblock'],
 };
