@@ -1,5 +1,5 @@
 ---
-id: doc1
+id: general
 title: General Guide
 sidebar_label: General Guide
 slug: /
