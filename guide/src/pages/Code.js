@@ -7,9 +7,9 @@ import styles from "./styles.module.css";
 import Editor from "../../components/Editor";
 
 const Code = () => {
-  let img;
   const [code, setCode] = useState("");
   const [selected, setSelected] = useState("");
+  const [img, setImg] = useState("");
 
   const getCode = (e) => {
     var finalCode = "";
@@ -45,7 +45,9 @@ const Code = () => {
       });
     }
 
-    img = base64.decode(res.status);
+    let a = res.data.status;
+    a = a.slice(2, a.length-2);
+    setImg(a);
   };
 
   const handleSelection = (e) => {
@@ -68,6 +70,8 @@ const Code = () => {
         <option value="Call Graph">Call Graph</option>
       </select>
 
+      <h3>Output: </h3>
+      <br/> <br/>
       {img && <img src={`data:image/png;base64,${img}`} />}
     </div>
   );
