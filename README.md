@@ -4,13 +4,13 @@
 
 ## Motivation
 
-Jumping into a large open-source project with no prior experience navigating such a codebase can certainly seem daunting. MLH Fellowship's Open-source track gives a platform for such budding contributors to learn and hone these skills. However, often times, the beginning weeks can seem challenging and the challenge usually lies in this one question - **How to understand the large codebase of an open-source project?**
+Jumping into a large open-source project with no prior experience navigating such a codebase can certainly seem daunting. MLH Fellowship's Open-source track gives a platform for such budding contributors to learn and hone these skills. However, oftentimes, the beginning weeks can seem challenging and the challenge usually lies in this one question - **How to understand the large codebase of an open-source project?**
 
 ## What does this website encompass?
 
 This handbook helps fellows out with the same. We have divided this project into 3 sections -
 
-* **General Guide and Exploring** - This contains general information about how one can proceed contributing to open-source. We have carefully crafted this and it presently contains the following topics -
+* **General Guide and Exploring** - This contains general information about how one can proceed to contribute to open-source. We have carefully crafted this and it presently contains the following topics -
 
   * **Choosing a Project** - How to go about selecting a project to contribute to?
   * **Getting Started with a Repository** - How to make those baby steps? Contains sub-topics like -
@@ -31,7 +31,7 @@ This handbook helps fellows out with the same. We have divided this project into
     * _Feedback from mentors and maintainers_
     * _Debugging, Logging, and Profilers_
   * **Claim an issue**
-  * **Exploring** - This contains a list of interesting links regarding this very topics and also contains a _special thanks_ section.
+  * **Exploring** - This contains a list of interesting links regarding these very topics and also contains a _special thanks_ section.
 
 * **Stories** - As mentioned in the *Welcome* guide of stories section, this space was formulated to enable -
   * Fellow developers to share their experiences navigating any codebase, and
