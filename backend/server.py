@@ -72,6 +72,3 @@ def generate_callgraph():
     else:
         return "Request Method not supported"
     
-
-if __name__ == '__main__':
-    app.run()
