@@ -13,7 +13,6 @@ linecache2==1.0.0
 MarkupSafe==1.1.1
 mccabe==0.6.1
 Pillow==8.0.1
-pkg-resources==0.0.0
 pycallgraph==1.0.1
 pydot==1.4.1
 pylint==2.6.0
