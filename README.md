@@ -1,6 +1,6 @@
 # OSS-Guide
 
-![README Landing Page](./OSS-Guide.png)
+![README Landing Page](https://socialify.git.ci/MLH-Fellowship/OSS-Guide/image?description=1&descriptionEditable=A%20handbook%20to%20help%20people%20getting%20started%20with%20open%20source%20contributions&font=Raleway&issues=1&language=1&logo=https%3A%2F%2Fraw.githubusercontent.com%2FMLH-Fellowship%2FOSS-Guide%2Fmain%2Fguide%2Fstatic%2Fimg%2Flogo.svg&owner=1&pattern=Formal%20Invitation&pulls=1&stargazers=1&theme=Light)
 
 ## Motivation
 
